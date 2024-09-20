@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo - Cash Out</title>
+    <!-- ================= google font import ================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- ================= tailwind CSS cdn link ================= -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ================= tailwind CSS customize ================= -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+              fontFamily: {
+                outfit: ['Outfit', 'sans-serif']
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="font-outfit">
+    <main class="w-full h-[100vh] bg-sky-950 flex items-center justify-center">
+        <div id="mobile-body" class="w-[450px] bg-[#F4F5F7] h-[930px] drop-shadow-lg overflow-y-scroll">
+            <div class="w-full min-h-[400px] bg-[#FFFFFF] rounded-bl-3xl rounded-br-3xl mb-8">
+                <div class="w-full h-[85px] px-6 flex items-center justify-between border-b border-[#dadcdd]">
+                    <div class="flex items-center gap-2">
+                        <div>
+                            <a href="home.html"><img src="./assets/home-logo.png" alt=""></a>
+                        </div>
+                        <div>
+                            <h1 class="font-extrabold text-[18px] leading-[23px] text-[#080808E6] mb-[6px]">$<span id="myBalance">4500</span></h1>
+                            <p class="font-normal text-[14px] leading-[18px] text-[#08080880]">Available Balance</p>
+                        </div>
+                    </div>
+                    <button id="logoutBtn" class="flex items-center justify-center gap-2 py-[9px] px-3 rounded-[8px] border border-[#0808081A] font-normal text-[14px] leading-[18px] text-[#08080880]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-[#666768]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                        </svg>
+                        Log Out
+                    </button>
+                </div>
+                <div class="w-full px-6 py-8">
+                    <div id="details" class="mb-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <img src="./assets/fire-icon.png" alt="icon">
+                            <h1 class="font-bold text-2xl leading-[30px] text-[#080808]">Welcome to Payooo!</h1>
+                        </div>
+                        <p class="font-normal text-base leading-[26px] text-[#08080880]">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 items-center justify-items-center">
+                        <div id="addMoney" class="w-[123px] h-[90px] py-5 px-[10px] border rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer">
+                            <img src="./assets/add-money.png" alt="icon">
+                            <p class="font-normal text-sm leading-[18px] text-[#080808B3]">Add Money</p>
+                        </div>
+                        <div id="card" class="w-[123px] h-[90px] py-5 px-[10px] border border-[#0874F2] rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer bg-[#0874F20D]">
+                            <img src="./assets/cash-out.png" alt="icon">
+                            <p class="font-semibold text-sm leading-[18px] text-[#0874F2]">Cashout</p>
+                        </div>
+                        <div id="card" class="w-[123px] h-[90px] py-5 px-[10px] border border-[#0808081A] rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer">
+                            <img src="./assets/transfer-money.png" alt="icon">
+                            <p class="font-normal text-sm leading-[18px] text-[#080808B3]">Transfer Money</p>
+                        </div>
+                        <div id="card" class="w-[123px] h-[90px] py-5 px-[10px] border border-[#0808081A] rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer">
+                            <img src="./assets/get-bonus.png" alt="icon">
+                            <p class="font-normal text-sm leading-[18px] text-[#080808B3]">Get Bonus</p>
+                        </div>
+                        <div id="card" class="w-[123px] h-[90px] py-5 px-[10px] border border-[#0808081A] rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer">
+                            <img src="./assets/pay-bill.png" alt="icon">
+                            <p class="font-normal text-sm leading-[18px] text-[#080808B3]">Pay Bill</p>
+                        </div>
+                        <div id="card" class="w-[123px] h-[90px] py-5 px-[10px] border border-[#0808081A] rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer">
+                            <img src="./assets/transacition.png" alt="icon">
+                            <p class="font-normal text-sm leading-[18px] text-[#080808B3]">Transacitions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full px-6 mb-8">
+                <div class="w-full mb-4 flex items-center justify-between">
+                    <h1 class="font-semibold text-[18px] leading-[23px] text-[#080808E6]">Cash Out</h1>
+                </div>
+                <div id="form-bx" class="w-full bg-white min-h-[300px] p-8 rounded-3xl">
+                    <form action="#" class="flex flex-col">
+                        <label for="#" class="mt-4 mb-3">
+                            <span class="font-outfit text-base font-medium leading-5 text-[#080808]">Agent Number</span>
+                        </label>
+                        <input id="agentNumber" type="text" placeholder="Enter 11 digit number" class="bg-[#F4F5F7] py-4 px-5 rounded-[32px] placeholder:text-base font-normal placeholder:text-[#969697] placeholder:leading-5 focus:outline-none" autocomplete="off" required>
+                        <label for="#" class="mt-4 mb-3">
+                            <span class="font-outfit text-base font-medium leading-5 text-[#080808]">Amount</span>
+                        </label>
+                        <input id="amountInput" type="text" placeholder="Enter amount to withdraw" class="bg-[#F4F5F7] py-4 px-5 rounded-[32px] placeholder:text-base font-normal placeholder:text-[#969697] placeholder:leading-5 focus:outline-none" autocomplete="off" required>
+                        <label for="#" class="mt-4 mb-3">
+                            <span class="font-outfit text-base font-medium leading-5 text-[#080808]">Pin Number</span>
+                        </label>
+                        <input id="passNumberInput" type="password" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] py-4 px-5 rounded-[32px] placeholder:text-base font-normal placeholder:text-[#969697] placeholder:leading-5 focus:outline-none" autocomplete="off" required>
+                        <button id="cashOutBtn" class="mt-4 bg-[#0874F2] py-[14px] px-5 rounded-[32px] font-outfit text-xl leading-[25px] font-semibold text-[#FFFFFF]">Withdraw Money</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/cashOut.js"></script>
+</body>
+</html>
