@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payoo - Add Money</title>
+    <title>Payoo - Transfer Money</title>
     <!-- ================= google font import ================= -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,17 +56,17 @@
                         <p class="font-normal text-base leading-[26px] text-[#08080880]">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
                     </div>
                     <div class="grid grid-cols-3 gap-4 items-center justify-items-center">
-                        <div id="card" class="w-[123px] h-[90px] py-5 px-[10px] border border-[#0874F2] rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer bg-[#0874F20D]">
+                        <div id="addMoney" class="w-[123px] h-[90px] py-5 px-[10px] border border-[#0808081A] rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer">
                             <img src="./assets/add-money.png" alt="icon">
-                            <p class="font-semibold text-sm leading-[18px] text-[#0874F2]">Add Money</p>
+                            <p class="font-normal text-sm leading-[18px] text-[#080808B3]">Add Money</p>
                         </div>
                         <div id="cashOut" class="w-[123px] h-[90px] py-5 px-[10px] border border-[#0808081A] rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer">
                             <img src="./assets/cash-out.png" alt="icon">
                             <p class="font-normal text-sm leading-[18px] text-[#080808B3]">Cashout</p>
                         </div>
-                        <div id="transferMoney" class="w-[123px] h-[90px] py-5 px-[10px] border border-[#0808081A] rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer">
+                        <div id="transferMoney" class="w-[123px] h-[90px] py-5 px-[10px] border border-[#0874F2] rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer bg-[#0874F20D]">
                             <img src="./assets/transfer-money.png" alt="icon">
-                            <p class="font-normal text-sm leading-[18px] text-[#080808B3]">Transfer Money</p>
+                            <p class="font-semibold text-sm leading-[18px] text-[#0874F2]">Transfer Money</p>
                         </div>
                         <div id="card" class="w-[123px] h-[90px] py-5 px-[10px] border border-[#0808081A] rounded-xl text-center flex items-center flex-col gap-y-2 cursor-pointer">
                             <img src="./assets/get-bonus.png" alt="icon">
@@ -85,32 +85,28 @@
             </div>
             <div class="w-full px-6 mb-8">
                 <div class="w-full mb-4 flex items-center justify-between">
-                    <h1 class="font-semibold text-[18px] leading-[23px] text-[#080808E6]">Add Money</h1>
+                    <h1 class="font-semibold text-[18px] leading-[23px] text-[#080808E6]">Transfer Money</h1>
                 </div>
                 <div id="form-bx" class="w-full bg-white min-h-[300px] p-8 rounded-3xl">
                     <form action="#" class="flex flex-col">
-                        <label for="#" class="mb-3">
-                            <span class="font-outfit text-base font-medium leading-5 text-[#080808]">Bank Name</span>
-                        </label>
-                        <input type="text" placeholder="Bank name" class="bg-[#F4F5F7] py-4 px-5 rounded-[32px] placeholder:text-base font-normal placeholder:text-[#969697] placeholder:leading-5 focus:outline-none" autocomplete="off" required>
                         <label for="#" class="mt-4 mb-3">
-                            <span class="font-outfit text-base font-medium leading-5 text-[#080808]">Bank Account Number</span>
+                            <span class="font-outfit text-base font-medium leading-5 text-[#080808]">User Account Number</span>
                         </label>
-                        <input id="bankNumberInput" type="text" placeholder="Enter 11 digit account number" class="bg-[#F4F5F7] py-4 px-5 rounded-[32px] placeholder:text-base font-normal placeholder:text-[#969697] placeholder:leading-5 focus:outline-none" autocomplete="off" required>
+                        <input id="userNumber" type="text" placeholder="Enter 11 digit number" class="bg-[#F4F5F7] py-4 px-5 rounded-[32px] placeholder:text-base font-normal placeholder:text-[#969697] placeholder:leading-5 focus:outline-none" autocomplete="off" required>
                         <label for="#" class="mt-4 mb-3">
-                            <span class="font-outfit text-base font-medium leading-5 text-[#080808]">Amount to Add</span>
+                            <span class="font-outfit text-base font-medium leading-5 text-[#080808]">Amount</span>
                         </label>
-                        <input id="addAmountInput" type="text" placeholder="Add Amount to withdraw" class="bg-[#F4F5F7] py-4 px-5 rounded-[32px] placeholder:text-base font-normal placeholder:text-[#969697] placeholder:leading-5 focus:outline-none" autocomplete="off" required>
+                        <input id="amountInput" type="text" placeholder="Enter amount to transfer" class="bg-[#F4F5F7] py-4 px-5 rounded-[32px] placeholder:text-base font-normal placeholder:text-[#969697] placeholder:leading-5 focus:outline-none" autocomplete="off" required>
                         <label for="#" class="mt-4 mb-3">
                             <span class="font-outfit text-base font-medium leading-5 text-[#080808]">Pin Number</span>
                         </label>
                         <input id="passNumberInput" type="password" placeholder="Enter 4 digit pin number" class="bg-[#F4F5F7] py-4 px-5 rounded-[32px] placeholder:text-base font-normal placeholder:text-[#969697] placeholder:leading-5 focus:outline-none" autocomplete="off" required>
-                        <button id="addMoneyBtn" class="mt-4 bg-[#0874F2] py-[14px] px-5 rounded-[32px] font-outfit text-xl leading-[25px] font-semibold text-[#FFFFFF]">Add Money</button>
+                        <button id="transferMoneyBtn" class="mt-4 bg-[#0874F2] py-[14px] px-5 rounded-[32px] font-outfit text-xl leading-[25px] font-semibold text-[#FFFFFF]">Send Now</button>
                     </form>
                 </div>
             </div>
         </div>
     </main>
-    <script src="./js/addMoney.js"></script>
+    <script src="./js/transferMoney.js"></script>
 </body>
 </html>

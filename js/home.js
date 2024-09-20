@@ -15,3 +15,9 @@ const cashOut = document.getElementById('cash-out');
 cashOut.addEventListener('click', function(){
     window.location.href = "./cashOut.html?#";
 });
+
+const transferMoney = document.getElementById('transferMoney');
+
+transferMoney.addEventListener('click', function(){
+    window.location.href = './transferMoney.html?#';
+});

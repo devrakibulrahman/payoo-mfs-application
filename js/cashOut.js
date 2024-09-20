@@ -31,4 +31,10 @@ const logOutBtn = document.getElementById('logoutBtn');
 
 logOutBtn.addEventListener('click', function(){
     window.location.href = './index.html';
-})
+});
+
+const transferMoney = document.getElementById('transferMoney');
+
+transferMoney.addEventListener('click', function(){
+    window.location.href = './transferMoney.html?#';
+});
